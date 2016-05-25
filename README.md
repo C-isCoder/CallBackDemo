@@ -12,7 +12,6 @@
       void ItemOnClick(BabyData data, TextView view);
     }
   </code></pre> 
-
   set2：一个类中创建这个接口的对象并提供一个对外的设置方法（方法穿的参数即接口类）；
   <pre><code>
     /**
@@ -28,7 +27,6 @@
       }
     }
   </code></pre>
-  
   set3：在要回调的地方创建一个set2类的对象，并调用设置方法设置set2类中的接口；
   <pre><code>
     RecycleAdapter mAdapter;
@@ -41,8 +39,6 @@
             }
             });
   </code></pre>
-  
-  
 #RecycleAdapter的写法，以及RecycleView实现瀑布流布局
 <pre><code>
   package qiqi.love.you;
@@ -59,7 +55,6 @@
   import java.util.List;
   import butterknife.BindView;
   import butterknife.ButterKnife;
-
 
   /**
   * Created by iscod on 2016/5/25.
