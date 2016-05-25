@@ -3,30 +3,30 @@
 #回调关键类:
   set1：定义一个接口；
   <pre><code>
-  package qiqi.love.you;
-  import android.widget.TextView;
-  /**
+    package qiqi.love.you;
+    import android.widget.TextView;
+    /**
     * Created by iscod on 2016/5/25.
     */
-  public interface RecycleOnClick {
-    void ItemOnClick(BabyData data, TextView view);
-  }
+    public interface RecycleOnClick {
+      void ItemOnClick(BabyData data, TextView view);
+    }
   </code></pre> 
 
   set2：一个类中创建这个接口的对象并提供一个对外的设置方法（方法穿的参数即接口类）；
   <pre><code>
-  /**
-   * Created by iscod on 2016/5/25.
-   */
-  public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
-    //创建一个接口对象
-    private RecycleOnClick mListenter;
-
-    //设置接口对象
-    public void setRecycleOnClickListener(RecycleOnClick listener) {
-        mListenter = listener;
+    /**
+      * Created by iscod on 2016/5/25.
+      */
+    public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
+      //创建一个接口对象
+      private RecycleOnClick mListenter;
+  
+      //设置接口对象
+      public void setRecycleOnClickListener(RecycleOnClick listener) {
+          mListenter = listener;
+      }
     }
-
   </code></pre>
   
   set3：在要回调的地方创建一个set2类的对象，并调用设置方法设置set2类中的接口；
@@ -39,7 +39,7 @@
                 Snackbar.make(recycleView, data.getText(), Snackbar.LENGTH_SHORT).show();
                 view.setText("小样点你了吧~~！！");
             }
-        });
+            });
   </code></pre>
   
   
