@@ -20,7 +20,6 @@
       public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
         //创建一个接口对象
        private RecycleOnClick mListenter;
-  
        //设置接口对象
         public void setRecycleOnClickListener(RecycleOnClick listener) {
           mListenter = listener;
