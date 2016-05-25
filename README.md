@@ -6,17 +6,17 @@
     package qiqi.love.you;
     import android.widget.TextView;
     /**
-      * Created by iscod on 2016/5/25.
-      */
+    * Created by iscod on 2016/5/25.
+    */
     public interface RecycleOnClick {
       void ItemOnClick(BabyData data, TextView view);
     }
   </code></pre> 
-  set2：一个类中创建这个接口的对象并提供一个对外的设置方法（方法穿的参数即接口类）；
+  set2：一个类中创建这个接口的对象并提供一个对外的设置方法(方法穿的参数即接口类);
   <pre><code>
     /**
-      * Created by iscod on 2016/5/25.
-      */
+    * Created by iscod on 2016/5/25.
+    */
     public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
       //创建一个接口对象
       private RecycleOnClick mListenter;
